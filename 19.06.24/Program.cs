@@ -1,40 +1,30 @@
-﻿namespace _19._06._24
+﻿using System;
+
+namespace _19._06._24
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //creo un oggetto ContoCorrente
-            ContoCorrente conto = new ContoCorrente("1234567", "Ginevra Delia");
+            // Esegui il menu iniziale del conto corrente
+            ContoCorrente conto = new ContoCorrente();
+            conto.MenuInizialeStart();
 
-            //Apro il contocorrente con un versamento iniziale 
-            conto.ApriConto(1500); //soddisfo la richiesta di un primo versamento di almeno 1000 euro
-
-            //Faccio il versamento
-            conto.Versamento(500);
-
-            //Faccio un prelievo
-            conto.Prelievo(200);
-
-            //Aspetto per visualizzare i risultati
-            Console.WriteLine("Premi un tasto per continuare");
-            Console.ReadKey();
-
-            //Ricerca di un nome in un array
+            // Ricerca di un nome in un array
             CercaNomeInArray();
 
-            //Somma e media di numeri in un array
+            // Somma e media di numeri in un array
             CalcolaSommaEMedia();
         }
 
         static void CercaNomeInArray()
         {
-            //definiamo l'array
-            int dimensioneArray = 3;
+            // Definire la dimensione dell'array
+            int dimensioneArray = 5;
             string[] nomi = new string[dimensioneArray];
 
-            //caricare array con i nomi
-            Console.WriteLine("Inserisci 3 nomi:");
+            // Caricare l'array con i nomi
+            Console.WriteLine("Inserisci 5 nomi:");
             for (int i = 0; i < dimensioneArray; i++)
             {
                 Console.Write($"Nome {i + 1}: ");
